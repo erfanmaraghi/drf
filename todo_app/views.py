@@ -7,3 +7,8 @@ from .serializer import TodoSerializer
 class TodosView(generics.ListCreateAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
+
+
+class TodoDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Todo.objects.all()
+    serializer_class = TodoSerializer
